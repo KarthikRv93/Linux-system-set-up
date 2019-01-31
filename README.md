@@ -1,1 +1,1 @@
-# Linux-system-set-up
+1. make zsh default shell
