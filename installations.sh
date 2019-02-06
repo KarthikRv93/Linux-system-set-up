@@ -23,7 +23,8 @@ sudo apt-get install python3.6
 sudo apt-get install pylint
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 git clone https://github.com/KarthikRv93/Linux-system-set-up.git
 cp ~/Linux-system-set-up/.vimrc ~/
 git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
