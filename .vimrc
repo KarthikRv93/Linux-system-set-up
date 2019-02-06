@@ -163,11 +163,7 @@ set laststatus=2
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.6
-sudo apt-get install pylint
+
 
 "vim settings
 set statusline+=%#warningmsg#
