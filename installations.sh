@@ -18,6 +18,7 @@ sudo apt-get install vim -y
 sudo apt-get install curl -y
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get install vim-gnome -y
 sudo apt-get update -y
 sudo apt-get install python3.6 -y
 sudo apt-get install pylint -y
