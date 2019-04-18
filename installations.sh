@@ -4,23 +4,23 @@ sudo apt-get --purge remove git-core
 sudo apt-get --purge remove vim
 sudo apt-get --purge remove curl
 
-sudo apt-get install git
-sudo apt-get install zsh
-sudo apt-get install git-core
+sudo apt-get install git -y
+sudo apt-get install zsh  -y
+sudo apt-get install git-core -y
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s `which zsh`
 
 ubuntu-drivers devices
-sudo ubuntu-drivers autoinstall
+sudo ubuntu-drivers autoinstall -y
 sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt-get update
-sudo apt-get install vim
-sudo apt-get install curl
-sudo apt-get install software-properties-common
+sudo apt-get update -y
+sudo apt-get install vim -y
+sudo apt-get install curl -y
+sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.6
-sudo apt-get install pylint
+sudo apt-get update -y
+sudo apt-get install python3.6 -y
+sudo apt-get install pylint -y
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle && \
@@ -33,8 +33,8 @@ git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-git clone https://github.com/chrisbra/vim-commentary ~/.vim/bundle/vim-commentary
-git clone git://github.com/nathanaelkane/vim-indent-guides.git ~/.vim/bundle/vim-indent-guides
-sudo shutdown -r 0
+cd /tmp;curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+sha256sum Anaconda3-2019.03-Linux-x86_64.sh
+bash Anaconda3-2019.03-Linux-x86_64.sh
+source ~/.zshrc
+

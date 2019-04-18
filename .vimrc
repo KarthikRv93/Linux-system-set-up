@@ -126,25 +126,6 @@ syntax on
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-" Automatically cd into the directory that the file is in
-"autocmd BufEnter * execute \"chdir \".escape(expand("%:p:h"), ' ')
-
-" Color schemes (Uncomment to select)
-"colorscheme desert
-"colorscheme shine
-"colorscheme elflord
-"colorscheme blue
-"colorscheme darkblue
-"colorscheme delek
-colorscheme koehler
-"colorscheme slate
-"colorscheme morning
-"colorscheme evening
-"colorscheme pablo
-"colorscheme murphy
-"colorscheme torte
-"colorscheme zellner
-"set background=dark
 
 " Make Vim remember cursor location
 source $VIMRUNTIME/vimrc_example.vim
@@ -166,24 +147,12 @@ match ExtraWhitespace /\s\+$/
 
 
 "vim settings
-set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
 let g:syntastic_check_on_w = 1
 let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
 highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
 
 " --- End of Vim options --- "
 
