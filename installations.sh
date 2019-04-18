@@ -36,5 +36,4 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd /tmp;curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 sha256sum Anaconda3-2019.03-Linux-x86_64.sh
 bash Anaconda3-2019.03-Linux-x86_64.sh
-source ~/.zshrc
 
