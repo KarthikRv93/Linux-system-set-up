@@ -34,7 +34,12 @@ git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-cd /tmp;curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+cd /tmp
+curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 sha256sum Anaconda3-2019.03-Linux-x86_64.sh
 bash Anaconda3-2019.03-Linux-x86_64.sh
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install openjdk-8-jdk
+cd ~
 
