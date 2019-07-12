@@ -66,6 +66,15 @@ docker ()
     docker-compose --version
 }
 
+google_drive ()
+{
+    sudo add-apt-repository ppa:alessandro-strada/ppa
+    sudo apt install google-drive-ocamlfuse
+    rm -rf ~/google-drive
+    mkdir ~/google-drive
+    google-drive-ocamlfuse ~/google-drive
+}
+
 if [ "$1" = "general" ]; then
     if [ "$2" = "fresh" ]; then
         remove_all
@@ -75,4 +84,7 @@ elif [ "$1" = "docker" ]; then
     docker
 elif [ "$1" = "conda" ]; then
     conda
+elif [ "$1" = "googledrive" ]; then
+    google_drive
+fi
 fi
