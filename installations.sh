@@ -6,6 +6,7 @@ remove_all ()
     sudo apt-get --purge remove git-core
     sudo apt-get --purge remove vim
     sudo apt-get --purge remove curl
+    sudo apt-get --purge remove Okular
 }
 general ()
 {
@@ -25,6 +26,7 @@ general ()
     sudo apt-get update -y
     sudo apt-get install python3.6 -y
     sudo apt-get install pylint -y
+    sudo apt-get install Okular -y
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     cd ~/.vim/bundle && \
@@ -36,10 +38,10 @@ general ()
     git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb
     cd ~
+
 }
 
 conda ()
