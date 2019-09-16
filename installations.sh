@@ -27,6 +27,7 @@ general ()
     sudo apt-get install python3.6 -y
     sudo apt-get install pylint -y
     sudo apt-get install Okular -y
+    sudo apt-get install xclip
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     cd ~/.vim/bundle && \
@@ -89,4 +90,4 @@ elif [ "$1" = "conda" ]; then
 elif [ "$1" = "googledrive" ]; then
     google_drive
 fi
-fi
+
