@@ -11,7 +11,6 @@ remove_all ()
 general ()
 {
     sudo apt-get install zsh  -y
-    sudo apt-get install git-core -y
     wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
     chsh -s `which zsh`
     ubuntu-drivers devices
@@ -45,6 +44,14 @@ general ()
     sudo dpkg -i google-chrome-stable_current_amd64.deb
     cd ~
 
+}
+
+git (){
+    sudo apt-get install git-core -y
+    git config --global user.name "Karthik N R"
+    git config --global user.email "karthik.rv93@gmail.com"
+    git config merge.tool vimdiff
+    git config merge.conflictstyle diff3
 }
 
 conda ()
@@ -84,6 +91,7 @@ if [ "$1" = "general" ]; then
     if [ "$2" = "fresh" ]; then
         remove_all
     fi
+    git
     general
 elif [ "$1" = "docker" ]; then
     docker
@@ -91,5 +99,7 @@ elif [ "$1" = "conda" ]; then
     conda
 elif [ "$1" = "googledrive" ]; then
     google_drive
+elif [ "$1" = "git"]; then
+    git
 fi
 
