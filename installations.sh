@@ -17,6 +17,10 @@ general ()
     ubuntu-drivers devices
     sudo ubuntu-drivers autoinstall -y
     sudo add-apt-repository ppa:graphics-drivers/ppa
+    chsh -s `which zsh`
+    ubuntu-drivers devices
+    sudo ubuntu-drivers autoinstall -y
+    sudo add-apt-repository ppa:graphics-drivers/ppa
     sudo apt-get update -y
     sudo apt-get install vim -y
     sudo apt-get install curl -y
@@ -28,12 +32,14 @@ general ()
     sudo apt-get install pylint -y
     sudo apt-get install Okular -y
     sudo apt-get install xclip
+    sudo apt-get install nautilus -y
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     cd ~/.vim/bundle && \
     git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
     git clone https://github.com/KarthikRv93/Linux-system-set-up.git
     cp ~/Linux-system-set-up/.vimrc ~/
+    mv ~/Linux-system-set-up/.zshrc ~/
     git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
     git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
     git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
