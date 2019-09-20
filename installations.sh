@@ -17,10 +17,6 @@ general ()
     ubuntu-drivers devices
     sudo ubuntu-drivers autoinstall -y
     sudo add-apt-repository ppa:graphics-drivers/ppa
-    chsh -s `which zsh`
-    ubuntu-drivers devices
-    sudo ubuntu-drivers autoinstall -y
-    sudo add-apt-repository ppa:graphics-drivers/ppa
     sudo apt-get update -y
     sudo apt-get install vim -y
     sudo apt-get install curl -y
